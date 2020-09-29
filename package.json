@@ -1,0 +1,28 @@
+{
+  "name": "beyondhackathon",
+  "version": "1.0.0",
+  "description": "[BeyondHackaton 2020](https://blog.beyondcurriculum.kz/hackathon/)\r ---\r Тема: Устойчивое общество (Охрана окружающей среды)",
+  "main": "sass/mystyles.scss",
+  "dependencies": {
+    "bulma-carousel": "^4.0.4"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.1",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsehl/BeyondHackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wsehl/BeyondHackathon/issues"
+  },
+  "homepage": "https://github.com/wsehl/BeyondHackathon#readme"
+}

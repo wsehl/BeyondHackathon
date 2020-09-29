@@ -1,95 +1,45 @@
 <?php
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Greenmeets</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-    <script src="index.js"></script>
+    <title>My custom Bulma website</title>
+    <link rel="stylesheet" href="css/mystyles.css">
 </head>
 
 <body>
-    <section class="hero is-success is-large">
-        <div class="hero-head">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item">
-                            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-                        </a>
-                        <span class="navbar-burger burger" data-target="navbarMenuHeroB">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
-                    <div id="navbarMenuHeroB" class="navbar-menu">
-                        <div class="navbar-end">
-                            <a class="navbar-item is-active">
-                                Home
-                            </a>
-                            <a class="navbar-item">
-                                Examples
-                            </a>
-                            <a class="navbar-item">
-                                Documentation
-                            </a>
-                            <span class="navbar-item">
-                                <a class="button is-info is-inverted">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                                    <span>Download</span>
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
+    <h1 class="title">
+        Bulma
+    </h1>
 
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <p class="title">
-                    Title
-                </p>
-                <p class="subtitle">
-                    Subtitle
-                </p>
-            </div>
-        </div>
+    <p class="subtitle">
+        Modern CSS framework based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>
+    </p>
 
-        <div class="hero-foot">
-            <nav class="tabs is-boxed is-fullwidth">
-                <div class="container">
-                    <ul>
-                        <li class="is-active">
-                            <a>Overview</a>
-                        </li>
-                        <li>
-                            <a>Modifiers</a>
-                        </li>
-                        <li>
-                            <a>Grid</a>
-                        </li>
-                        <li>
-                            <a>Elements</a>
-                        </li>
-                        <li>
-                            <a>Components</a>
-                        </li>
-                        <li>
-                            <a>Layout</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+    <div class="field">
+        <div class="control">
+            <input class="input" type="text" placeholder="Input">
         </div>
-    </section>
+    </div>
+
+    <div class="field">
+        <p class="control">
+            <span class="select">
+                <select>
+                    <option>Select dropdown</option>
+                </select>
+            </span>
+        </p>
+    </div>
+
+    <div class="buttons">
+        <a class="button is-primary">Primary</a>
+        <a class="button is-link">Link</a>
+    </div>
 </body>
 
 </html>
