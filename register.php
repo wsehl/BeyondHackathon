@@ -7,7 +7,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 } else {
     $log = 0;
 }
-require_once "core/config.php";
+require_once "config.php";
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

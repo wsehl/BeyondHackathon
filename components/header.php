@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/modal-fx.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
 </head>
 
 <body>
@@ -25,41 +29,39 @@
             </div>
             <div id="navMenuDocumentation" class="navbar-menu">
                 <div class="navbar-end">
-                    <a class="navbar-item" href="about.php"><span><?php echo $lang['about']; ?></span></a>
-                    <a class="navbar-item" href="contact.php"><span><?php echo $lang['contact']; ?></span></a>
                     <div class="navbar-item">
-                        <div class="buttons">
-                            <?php
-                            if ($logged == false) {
-                            ?>
-                                <a class="button modal-button" data-target="#signin">
-                                    <span class="icon has-text-info">
-                                        <i class="far fa-user"></i>
-                                    </span>
-                                    <span><?php echo $lang['login']; ?></span>
-                                </a>
-                            <?php
-                            } else if ($logged == true) {
-                            ?>
-                                <a href="welcome.php" class="button is-small">Профиль</a>
-                                <div class="navbar-item has-dropdown is-hoverable">
-                                    <a class="navbar-link" role="presentation">My Account</a>
-                                    <div class="navbar-dropdown"><a class="navbar-item" href="//localhost/sites/sehlga/user/admin">Pastes</a><a class="navbar-item" href="//localhost/sites/sehlga/profile">Settings</a>
-                                        <hr class="navbar-divider">
-                                        <a class="navbar-item " href="logout.php">Logout</a>
-                                    </div>
+                        <a class="button is-light navbar-item mx-2" href="about.php">
+                            <span><?php echo $lang['about']; ?></span>
+                        </a>
+                        <?php
+                        if ($logged == false) {
+                        ?>
+                            <a class="button modal-button" data-target="#login">
+                                <span class="icon has-text-info">
+                                    <i class="far fa-user has-text-link"></i>
+                                </span>
+                                <span><?php echo $lang['login']; ?></span>
+                            </a>
+                        <?php
+                        } else if ($logged == true) {
+                        ?>
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-link" role="presentation">My Account</a>
+                                <div class="navbar-dropdown"><a class="navbar-item" href="">Profile</a><a class="navbar-item" href="">Events</a>
+                                    <hr class="navbar-divider">
+                                    <a class="navbar-item" href="logout.php">Logout</a>
                                 </div>
-                            <?php
-                            }
-                            ?>
-                        </div>
+                            </div>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div id="#signin" class="modal modal-fx-fadeInScale">
+    <div id="#login" class="modal modal-fx-fadeInScale">
         <div class="modal-background"></div>
         <div class="modal-content modal-card">
             <header class="modal-card-head">
@@ -117,8 +119,85 @@
 
             </section>
             <footer class="modal-card-foot">
-                <a href="login.php?register" class="button is-light">Register</a>
+                <a class="button is-light modal-button" data-target="#register">
+                    <span class="icon has-text-info">
+                        <i class="fas fa-sign-in-alt has-text-link"></i>
+                    </span>
+                    <span><?php echo $lang['register']; ?></span>
+                </a>
                 <a href="login.php?resend" class="button is-light">Resend verification email </a>
+            </footer>
+        </div>
+    </div>
+
+    <div id="#register" class="modal modal-fx-fadeInScale">
+        <div class="modal-background"></div>
+        <div class="modal-content modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Sign up</p>
+                <button class="modal-button-close delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <form method="POST" action="login.php?register">
+                    <div class="field">
+                        <label class="label">Username</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input type="text" class="input" name="username" placeholder="Username">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Your name</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input type="text" class="input" name="full" placeholder="Your Name">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-user-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input type="text" class="input" name="email" placeholder="Email">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input type="password" class="input" name="password" placeholder="Password">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-key"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <input class="button is-link" type="submit" name="signup" value="Sign up" value="<?php echo md5($date . $ip); ?>">
+                        </div>
+                        <!-- Oauth -->
+                        <div class="control">
+                            <a href="oauth/google.php?login">
+                                <div class="google-btn">
+                                    <div class="google-icon-wrapper">
+                                        <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                                    </div>
+                                    <p class="btn-text">Sign up with Google</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- // -->
+                </form>
+            </section>
+            <footer class="modal-card-foot">
+                <a href="login.php?login" class="button is-light">Already have an account?</a>
+                <a href="login.php?resend" class="button is-light">Resend verification email</a>
             </footer>
         </div>
     </div>
