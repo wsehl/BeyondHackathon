@@ -4,7 +4,8 @@
   "description": "[BeyondHackaton 2020](https://blog.beyondcurriculum.kz/hackathon/)\r ---\r Тема: Устойчивое общество (Охрана окружающей среды)",
   "main": "sass/mystyles.scss",
   "dependencies": {
-    "bulma-carousel": "^4.0.4"
+    "bulma-carousel": "^4.0.4",
+    "bulma-modal-fx": "^1.1.1"
   },
   "devDependencies": {
     "bulma": "^0.9.1",
