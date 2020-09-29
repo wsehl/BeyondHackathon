@@ -10,6 +10,7 @@
     <title>Greenmeetings</title>
     <link rel="stylesheet" href="css/mystyles.css">
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
