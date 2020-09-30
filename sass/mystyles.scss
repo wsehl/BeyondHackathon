@@ -31,3 +31,52 @@ $input-shadow: none;
 
 // Import only what you need from Bulma
 @import "../node_modules/bulma/bulma.sass";
+
+// Google button
+$color_1: #fff;
+$font_family_1: Roboto;
+$background_color_1: #4285f4;
+$background_color_2: #fff;
+
+.google-btn {
+  width: 184px;
+  height: 40px;
+  background-color: $background_color_1;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  -webkit-transition: background-color 218ms, border-color 218ms,
+    box-shadow 218ms;
+  transition: background-color 218ms, border-color 218ms, box-shadow 218ms;
+  .google-icon-wrapper {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 38px;
+    height: 38px;
+    border-radius: 2px;
+    background-color: $background_color_2;
+  }
+  .google-icon {
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  }
+  .btn-text {
+    float: right;
+    margin: 10px 11px 0 0;
+    color: $color_1;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    font-family: $font_family_1;
+    font-weight: 500;
+  }
+  &:hover {
+    box-shadow: 0 0 6px #4285f4;
+    cursor: pointer;
+  }
+  &:active {
+    background: #1669f2;
+  }
+}
