@@ -101,7 +101,7 @@
                                     <?php echo $lang['rememberme']; ?>
                                 </label>
                             </div>
-                            <a href="login.php?forgot" class="is-pulled-right">Forgot Password?</a>
+                            <a href="login.php?forgot" class="is-pulled-right"><?php echo $lang['passwordReset']; ?></a>
                         </div>
                         <br>
                         <div class="field is-grouped">
@@ -114,7 +114,7 @@
                                         <div class="google-icon-wrapper">
                                             <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
                                         </div>
-                                        <p class="btn-text">Sign in with Google</p>
+                                        <p class="btn-text"><?php echo $lang['SignWithGoogle']; ?></p>
                                     </div>
                                 </a>
                             </div>
@@ -128,7 +128,7 @@
                         </span>
                         <span><?php echo $lang['register']; ?></span>
                     </a>
-                    <a href="login.php?resend" class="button is-light">Resend verification email </a>
+                    <a href="login.php?resend" class="button is-light"><?php echo $lang['verification']; ?></a>
                 </footer>
             </div>
             <div id="regid" class="content-tab" style="display:none">

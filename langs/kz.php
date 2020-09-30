@@ -2,8 +2,11 @@
 
 $lang = array();
 
-$lang['rememberme'] = "Keep me signed in.";
-$lang['about'] = "About";
-$lang['contact'] = "Contact";
-$lang['login'] = "Login";
+$lang['rememberme'] = "Мені есептік жазбаға қалдырыңыз.";
+$lang['about'] = "Біз туралы";
+$lang['contact'] = "Байланыстар";
+$lang['login'] = "Кіру";
 $lang['logout']= "Шығу";
+$lang['SignWithGoogle']= "Google арқылы кіру";
+$lang['passwordReset']="Пароль ұмыттыңыз ба?";
+$lang['verification']="Тексеру хатын қайта жіберіңіз";
