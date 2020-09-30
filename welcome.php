@@ -16,7 +16,7 @@ require_once('components/header.php');
             <div class="columns">
                 <div class="column"></div>
                 <div class="column">
-                    <h1 class="title">Добро пожаловать, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>!</h1>
+                    <h1 class="title"><?php echo $lang['welcome']; ?> <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>!</h1>
                     <progress class="progress is-small is-light" max="100">15%</progress>
                 </div>
                 <div class="column"></div>
