@@ -8,9 +8,9 @@ if ($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-if(empty ($_SESSION["lang"])){
+if (empty($_SESSION["lang"])) {
     $default_lang = "en.php";
-    }
-    else{
+    echo "HI";
+} else {
     $default_lang = $_SESSION["lang"];
-    }
+}
