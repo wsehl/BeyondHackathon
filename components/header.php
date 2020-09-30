@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/mystyles.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/modal-fx.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -61,143 +60,139 @@
         </div>
     </nav>
 
-    <div id="#login" class="modal modal-fx-fadeInScale">
+    <div id="#login" class="modal modal-fx-fadeInScale is-active">
         <div class="modal-background"></div>
         <div class="modal-content modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Sign in</p>
+                <nav class="tabs" style="margin-bottom: -1.25rem;flex-grow:1;">
+                    <div class="container">
+                        <ul>
+                            <li class="tab is-active" onclick="openTab(event,'loginid')"><a><?php echo $lang['login']; ?></a></li>
+                            <li class="tab" onclick="openTab(event,'regid')"><a><?php echo $lang['register']; ?></a></li>
+                        </ul>
+                    </div>
+                </nav>
                 <button class="modal-button-close delete" aria-label="close"></button>
             </header>
-            <section class="modal-card-body">
-                <form method="POST" action="login.php?login">
-                    <div class="field">
-                        <label class="label">Username</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input type="text" class="input" name="username" placeholder="Username">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                            </span>
+            <div id="loginid" class="content-tab">
+                <section class="modal-card-body">
+                    <form method="POST" action="login.php?login">
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input type="text" class="input" name="username" placeholder="Username">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Password</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input type="password" class="input" name="password" placeholder="Password">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-key"></i>
-                            </span>
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input type="password" class="input" name="password" placeholder="Password">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-key"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <div class="b-checkbox is-info is-inline">
-                            <input class="is-checkradio is-info" id="rememberme" name="rememberme" type="checkbox" checked="">
-                            <label for="rememberme">
-                                <?php echo $lang['rememberme']; ?>
-                            </label>
+                        <div class="field">
+                            <div class="b-checkbox is-info is-inline">
+                                <input class="is-checkradio is-info" id="rememberme" name="rememberme" type="checkbox" checked="">
+                                <label for="rememberme">
+                                    <?php echo $lang['rememberme']; ?>
+                                </label>
+                            </div>
+                            <a href="login.php?forgot" class="is-pulled-right">Forgot Password?</a>
                         </div>
-                        <a href="login.php?forgot" class="is-pulled-right">Forgot Password?</a>
-                    </div>
-                    <br>
-                    <div class="field is-grouped">
-                        <div class="control">
-                            <input class="button is-link" type="submit" name="signin" value="Sign in" value="<?php echo md5($date . $ip); ?>">
-                        </div>
-                        <!-- Oauth -->
-                        <div class="control">
-                            <a href="oauth/google.php?login">
-                                <div class="google-btn">
-                                    <div class="google-icon-wrapper">
-                                        <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                        <br>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <input class="button is-link" type="submit" name="signin" value="Sign in" value="<?php echo md5($date . $ip); ?>">
+                            </div>
+                            <div class="control">
+                                <a href="oauth/google.php?login">
+                                    <div class="google-btn">
+                                        <div class="google-icon-wrapper">
+                                            <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                                        </div>
+                                        <p class="btn-text">Sign in with Google</p>
                                     </div>
-                                    <p class="btn-text">Sign in with Google</p>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- // -->
-                </form>
-
-            </section>
-            <footer class="modal-card-foot">
-                <a class="button is-light modal-button" data-target="#register">
-                    <span class="icon has-text-info">
-                        <i class="fas fa-sign-in-alt has-text-link"></i>
-                    </span>
-                    <span><?php echo $lang['register']; ?></span>
-                </a>
-                <a href="login.php?resend" class="button is-light">Resend verification email </a>
-            </footer>
-        </div>
-    </div>
-
-    <div id="#register" class="modal modal-fx-fadeInScale">
-        <div class="modal-background"></div>
-        <div class="modal-content modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">Sign up</p>
-                <button class="modal-button-close delete" aria-label="close"></button>
-            </header>
-            <section class="modal-card-body">
-                <form method="POST" action="login.php?register">
-                    <div class="field">
-                        <label class="label">Username</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input type="text" class="input" name="username" placeholder="Username">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                            </span>
+                    </form>
+                </section>
+                <footer class="modal-card-foot">
+                    <a class="button is-light modal-button" data-target="#register">
+                        <span class="icon has-text-info">
+                            <i class="fas fa-sign-in-alt has-text-link"></i>
+                        </span>
+                        <span><?php echo $lang['register']; ?></span>
+                    </a>
+                    <a href="login.php?resend" class="button is-light">Resend verification email </a>
+                </footer>
+            </div>
+            <div id="regid" class="content-tab" style="display:none">
+                <section class="modal-card-body">
+                    <form method="POST" action="login.php?register">
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input type="text" class="input" name="username" placeholder="Username">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Your name</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input type="text" class="input" name="full" placeholder="Your Name">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user-plus"></i>
-                            </span>
+                        <div class="field">
+                            <label class="label">Your name</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input type="text" class="input" name="full" placeholder="Your Name">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user-plus"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Email</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input type="text" class="input" name="email" placeholder="Email">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input type="text" class="input" name="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Password</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input type="password" class="input" name="password" placeholder="Password">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-key"></i>
-                            </span>
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input type="password" class="input" name="password" placeholder="Password">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-key"></i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <br>
-                    <div class="field is-grouped">
-                        <div class="control">
-                            <input class="button is-link" type="submit" name="signup" value="Sign up" value="<?php echo md5($date . $ip); ?>">
-                        </div>
-                        <!-- Oauth -->
-                        <div class="control">
-                            <a href="oauth/google.php?login">
-                                <div class="google-btn">
-                                    <div class="google-icon-wrapper">
-                                        <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                        <br>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <input class="button is-link" type="submit" name="signup" value="Sign up" value="<?php echo md5($date . $ip); ?>">
+                            </div>
+                            <div class="control">
+                                <a href="oauth/google.php?login">
+                                    <div class="google-btn">
+                                        <div class="google-icon-wrapper">
+                                            <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
+                                        </div>
+                                        <p class="btn-text">Sign up with Google</p>
                                     </div>
-                                    <p class="btn-text">Sign up with Google</p>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- // -->
-                </form>
-            </section>
-            <footer class="modal-card-foot">
-                <a href="login.php?login" class="button is-light">Already have an account?</a>
-                <a href="login.php?resend" class="button is-light">Resend verification email</a>
-            </footer>
+                    </form>
+                </section>
+                <footer class="modal-card-foot">
+                    <a href="login.php?login" class="button is-light">Already have an account?</a>
+                    <a href="login.php?resend" class="button is-light">Resend verification email</a>
+                </footer>
+            </div>
         </div>
     </div>

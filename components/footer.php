@@ -1,6 +1,9 @@
 <?php
 ?>
 
+<script src="js/modal-fx.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -16,17 +19,22 @@
         }
     });
 </script>
-<script src="js/modal-fx.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
 <script>
-    // highlight.js
-    (function() {
-        document.querySelectorAll('pre code').forEach(function(block) {
-            hljs.highlightBlock(block);
-        });
-    })();
+    function openTab(evt, tabName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("content-tab");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " is-active";
+    }
 </script>
-<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 
 </body>
 

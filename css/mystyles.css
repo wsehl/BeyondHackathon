@@ -3425,7 +3425,7 @@ button.dropdown-item {
   position: relative; }
 
 .modal-card-head {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 0px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px; }
 
