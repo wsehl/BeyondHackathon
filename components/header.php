@@ -55,8 +55,8 @@
                         } else if ($logged == true) {
                         ?>
                             <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link" role="presentation">My Account</a>
-                                <div class="navbar-dropdown"><a class="navbar-item" href="">Profile</a><a class="navbar-item" href="">Events</a>
+                                <a class="navbar-link" role="presentation"><?php echo $lang['account']; ?></a>
+                                <div class="navbar-dropdown"><a class="navbar-item" href=""><?php echo $lang['profile']; ?></a><a class="navbar-item" href=""><?php echo $lang['events']; ?></a>
                                     <hr class="navbar-divider">
                                     <a class="navbar-item" href="logout.php"><?php echo $lang['logout']; ?></a>
                                 </div>
@@ -88,7 +88,7 @@
                 <section class="modal-card-body">
                     <form method="POST" action="login.php?login">
                         <div class="field">
-                            <label class="label">Username</label>
+                            <label class="label"><?php echo $lang['username']; ?></label>
                             <div class="control has-icons-left has-icons-right">
                                 <input type="text" class="input" name="username" placeholder="Username">
                                 <span class="icon is-small is-left">
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Password</label>
+                            <label class="label"><?php echo $lang['password']; ?></label>
                             <div class="control has-icons-left has-icons-right">
                                 <input type="password" class="input" name="password" placeholder="Password">
                                 <span class="icon is-small is-left">
@@ -125,7 +125,7 @@
                                         <div class="google-icon-wrapper">
                                             <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
                                         </div>
-                                        <p class="btn-text"><?php echo $lang['SignWithGoogle']; ?></p>
+                                        <p class="btn-text"><?php echo $lang['signWithGoogle']; ?></p>
                                     </div>
                                 </a>
                             </div>
@@ -146,7 +146,7 @@
                 <section class="modal-card-body">
                     <form method="POST" action="login.php?register">
                         <div class="field">
-                            <label class="label">Username</label>
+                            <label class="label"><?php echo $lang['username']; ?></label>
                             <div class="control has-icons-left has-icons-right">
                                 <input type="text" class="input" name="username" placeholder="Username">
                                 <span class="icon is-small is-left">
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Your name</label>
+                            <label class="label"><?php echo $lang['name']; ?></label>
                             <div class="control has-icons-left has-icons-right">
                                 <input type="text" class="input" name="full" placeholder="Your Name">
                                 <span class="icon is-small is-left">
@@ -164,7 +164,7 @@
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Email</label>
+                            <label class="label"><?php echo $lang['email']; ?></label>
                             <div class="control has-icons-left has-icons-right">
                                 <input type="text" class="input" name="email" placeholder="Email">
                                 <span class="icon is-small is-left">
@@ -173,7 +173,7 @@
                             </div>
                         </div>
                         <div class="field">
-                            <label class="label">Password</label>
+                            <label class="label"><?php echo $lang['password']; ?></label>
                             <div class="control has-icons-left has-icons-right">
                                 <input type="password" class="input" name="password" placeholder="Password">
                                 <span class="icon is-small is-left">
@@ -192,7 +192,7 @@
                                         <div class="google-icon-wrapper">
                                             <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" />
                                         </div>
-                                        <p class="btn-text">Sign up with Google</p>
+                                        <p class="btn-text"><?php echo $lang['signWithGoogle']; ?></p>
                                     </div>
                                 </a>
                             </div>
@@ -200,8 +200,8 @@
                     </form>
                 </section>
                 <footer class="modal-card-foot">
-                    <a href="login.php?login" class="button is-light">Already have an account?</a>
-                    <a href="login.php?resend" class="button is-light">Resend verification email</a>
+                    <a href="login.php?login" class="button is-light"><?php echo $lang['haveAccount']; ?></a>
+                    <a href="login.php?resend" class="button is-light"><?php echo $lang['verification']; ?></a>
                 </footer>
             </div>
         </div>

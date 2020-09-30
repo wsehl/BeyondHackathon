@@ -6,6 +6,7 @@ $lang['rememberme'] = "Мені есептік жазбаға қалдырыңы
 $lang['about'] = "Біз туралы";
 $lang['contact'] = "Байланыстар";
 $lang['login'] = "Кіру";
+$lang['register'] = "Тіркелу";
 $lang['logout']= "Шығу";
 $lang['SignWithGoogle']= "Google арқылы кіру";
 $lang['passwordReset']="Пароль ұмыттыңыз ба?";
