@@ -56,31 +56,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($link);
 }
 ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Авторизация</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <link rel="stylesheet" href="css/style.css" />
-</head>
 
 
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                            <div class="field">
-                                <label class="label">Логин</label>
-                                <input class="input" type="text" name="username" value="<?php echo $username; ?>">
-                                <span class="help is-danger"><?php echo $username_err; ?></span>
-                            </div>
-                            <div class="field">
-                                <label class="label">Пароль</label>
-                                <input class="input" type="password" name="password">
-                                <span class="help is-danger"><?php echo $password_err; ?></span>
-                            </div>
-                            <div class="field">
-                                <input class="button is-link" type="submit" value="Войти">
-                            </div>
-                            <p>Нет аккаунта? <a href="register.php">Зарагестрироваться</a></p>
+
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <div class="field">
+        <label class="label">Логин</label>
+        <input class="input" type="text" name="username" value="<?php echo $username; ?>">
+        <span class="help is-danger"><?php echo $username_err; ?></span>
+    </div>
+    <div class="field">
+        <label class="label">Пароль</label>
+        <input class="input" type="password" name="password">
+        <span class="help is-danger"><?php echo $password_err; ?></span>
+    </div>
+    <div class="field">
+        <input class="button is-link" type="submit" value="Войти">
+    </div>
+    <p>Нет аккаунта? <a href="register.php">Зарагестрироваться</a></p>
