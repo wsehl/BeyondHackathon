@@ -1,12 +1,4 @@
 <?php
-session_start();
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    $log = 1;
-    header("location: index.php");
-    exit;
-} else {
-    $log = 0;
-}
 require_once "config.php";
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
@@ -53,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT);
             if (mysqli_stmt_execute($stmt)) {
-                header("location: login.php");
+                header("location: index.php");
             } else {
                 echo "Что-то пошло не так";
             }
@@ -63,6 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($link);
 }
 ?>
+
+
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
     <div class="field">

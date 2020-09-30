@@ -1,12 +1,4 @@
 <?php
-session_start();
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    $log = 1;
-    header("location: welcome.php");
-    exit;
-} else {
-    $log = 0;
-}
 require_once "config.php";
 $username = $password = "";
 $username_err = $password_err = "";
@@ -74,3 +66,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input class="button is-link" type="submit" value="Войти">
     </div>
     <p>Нет аккаунта? <a href="register.php">Зарагестрироваться</a></p>
+</form>
