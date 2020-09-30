@@ -27,9 +27,19 @@
                 </div>
             </div>
             <div id="navMenuDocumentation" class="navbar-menu">
+                <div class="navbar-start">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link is-arrowless" role="presentation"><i class="fas fa-globe-asia"></i></a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" style="padding-right:1rem" href=""><img alt="flag russia" src="https://twemoji.maxcdn.com/2/svg/1f1f7-1f1fa.svg" class="g-image" style="height: 64px;"></a>
+                            <a class="navbar-item" style="padding-right:1rem" href=""><img alt="flag united states" src="https://twemoji.maxcdn.com/2/svg/1f1fa-1f1f8.svg" class="g-image" style="height: 64px;"></a>
+                            <a class="navbar-item" style="padding-right:1rem" href=""><img alt="flag kazakhstan" src="https://twemoji.maxcdn.com/2/svg/1f1f0-1f1ff.svg" class="g-image" style="height: 64px;"></a>
+                        </div>
+                    </div>
+                </div>
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <a class="button is-light navbar-item mx-2" href="about.php">
+                        <a class="navbar-item bd-navbar-item-love mx-2" href="">
                             <span><?php echo $lang['about']; ?></span>
                         </a>
                         <?php
