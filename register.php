@@ -45,7 +45,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT);
             if (mysqli_stmt_execute($stmt)) {
-                header("location: index.php");
+                session_start();
+                $_SESSION["loggedin"] = true;
+                $_SESSION["id"] = $id;
+                $_SESSION["username"] = $username;
+                header("location: welcome.php");
             } else {
                 echo $lang['smth_wrong'];
             }
