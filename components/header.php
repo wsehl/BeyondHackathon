@@ -118,7 +118,7 @@
                         <br>
                         <div class="field is-grouped">
                             <div class="control">
-                                <input class="button is-link" type="submit" name="signin" value="Sign in" value="<?php echo md5($date . $ip); ?>">
+                                <input class="button is-link" type="submit" name="signin" value="<?php echo $lang['login'] ?>" value="<?php echo md5($date . $ip); ?>">
                             </div>
                             <div class="control">
                                 <a href="oauth/google.php?login">
@@ -185,7 +185,7 @@
                         <br>
                         <div class="field is-grouped">
                             <div class="control">
-                                <input class="button is-link" type="submit" name="signup" value="Sign up" value="<?php echo md5($date . $ip); ?>">
+                                <input class="button is-link" type="submit" name="signup" value="<?php echo $lang['register'] ?>" value="<?php echo md5($date . $ip); ?>">
                             </div>
                             <div class="control">
                                 <a href="oauth/google.php?login">
