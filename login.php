@@ -12,12 +12,12 @@ $username = $password = "";
 $username_err = $password_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty(trim($_POST["username"]))) {
-        $username_err = "Пожалуйста, введите имя полльзователя.";
+        $username_err = $lang['username_empty'];
     } else {
         $username = trim($_POST["username"]);
     }
     if (empty(trim($_POST["password"]))) {
-        $password_err = "Пожалуйста, введите пароль.";
+        $password_err = $lang['password_empty'];
     } else {
         $password = trim($_POST["password"]);
     }
@@ -43,11 +43,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["username"] = $username;
                             header("location: welcome.php");
                         } else {
-                            $password_err = "Неверный пароль.";
+                            $password_err = $lang['password_err'];
                         }
                     }
                 } else {
-                    $username_err = "Такого аккаунта не существует";
+                    $username_err = $lang['username_err'];
                 }
             }
         }
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Авторизация</title>
+    <title><?php echo $lang['authorization']; ?></title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <link rel="stylesheet" href="css/style.css" />
