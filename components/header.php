@@ -48,7 +48,7 @@
                                 <a class="navbar-link" role="presentation">My Account</a>
                                 <div class="navbar-dropdown"><a class="navbar-item" href="">Profile</a><a class="navbar-item" href="">Events</a>
                                     <hr class="navbar-divider">
-                                    <a class="navbar-item" href="logout.php">Logout</a>
+                                    <a class="navbar-item" href="logout.php"><?php echo $lang['logout']; ?></a>
                                 </div>
                             </div>
                         <?php

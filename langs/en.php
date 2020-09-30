@@ -7,3 +7,4 @@ $lang['about'] = "About";
 $lang['contact'] = "Contact";
 $lang['login'] = "Log in";
 $lang['register'] = "Sign up";
+$lang['logout']= "Шығу";
