@@ -31,10 +31,10 @@
                     <div class="navbar-item has-dropdown is-hoverable is-active">
                         <a class="navbar-link is-arrowless" role="presentation"><i class="fas fa-globe-asia"></i></a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" style="padding-right:0rem" href=""><img alt="flag russia" src="https://twemoji.maxcdn.com/2/svg/1f1f7-1f1fa.svg" class="g-image" style="height: 64px;padding:0rem"></a>
-                    <!--        <a class="navbar-item" style="padding-right:1rem" href="">EN &nbsp;<img alt="flag united states" src="https://twemoji.maxcdn.com/2/svg/1f1fa-1f1f8.svg" class="g-image" style="height: 64px;"></a>
-                            <a class="navbar-item" style="padding-right:1rem" href="">KZ &nbsp;<img alt="flag kazakhstan" src="https://twemoji.maxcdn.com/2/svg/1f1f0-1f1ff.svg" class="g-image" style="height: 64px;"></a>
--->
+                            <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('en.php')"><img alt="flag russia" src="https://twemoji.maxcdn.com/2/svg/1f1f7-1f1fa.svg" class="g-image" style="height: 64px;padding:0rem"></a>
+                           <a class="navbar-item" style="padding-right:1rem" href="" onclick="ChangeLang('en.php')">EN &nbsp;<img alt="flag united states" src="https://twemoji.maxcdn.com/2/svg/1f1fa-1f1f8.svg" class="g-image" style="height: 64px;"></a>
+                            <a class="navbar-item" style="padding-right:1rem" href="" onclick="ChangeLang('ru.php')">KZ &nbsp;<img alt="flag kazakhstan" src="https://twemoji.maxcdn.com/2/svg/1f1f0-1f1ff.svg" class="g-image" style="height: 64px;"></a>
+
                         </div>
                     </div>
                 </div>
