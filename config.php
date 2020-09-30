@@ -14,3 +14,8 @@ if (empty($_SESSION["lang"])) {
 } else {
     $default_lang = $_SESSION["lang"];
 }
+
+if($_POST){
+    $_SESSION["lang"] =$_POST["lang"];
+    $default_lang = $_POST["lang"];
+}

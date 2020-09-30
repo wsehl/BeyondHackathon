@@ -36,10 +36,10 @@
 </script>
 
 <script>
-    var lang;
+    var dlang;
 
-    function ChangeLang(lang) {
-        sessionStorage.setItem("lang", lang);
+    function ChangeLang(dlang) {
+        $.post( "config.php", { lang: dlang});
     }
 </script>
 
