@@ -3,7 +3,6 @@
 // Imports
 @import "https://fonts.googleapis.com/css?family=Nunito:400,700";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css";
-@import "css/modal-fx.min.css";
 
 // Set your brand colors
 $purple: #8a4d76;
@@ -12,6 +11,7 @@ $brown: #757763;
 $beige-light: #d0d1cd;
 $beige-lighter: #eff0eb;
 $green: #00ac0e;
+$black: #000000;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
@@ -24,6 +24,7 @@ $fullhd-enabled: false;
 
 //Modal
 $modal-card-head-border-bottom: 0px;
+$modal-content-width: 500px;
 
 // Update some of Bulma's component variables
 $body-background-color: $beige-lighter;
