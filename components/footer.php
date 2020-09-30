@@ -36,9 +36,11 @@
 </script>
 
 <script>
-ChangeLang(lang){
-sessionStorage.setItem("lang", lang);
-}
+    var lang;
+
+    function ChangeLang(lang) {
+        sessionStorage.setItem("lang", lang);
+    }
 </script>
 
 </body>
