@@ -60,7 +60,7 @@
         </div>
     </nav>
 
-    <div id="#login" class="modal modal-fx-fadeInScale is-active">
+    <div id="#login" class="modal modal-fx-fadeInScale">
         <div class="modal-background"></div>
         <div class="modal-content modal-card">
             <header class="modal-card-head">
