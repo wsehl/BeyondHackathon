@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Greenmeetings</title>
     <link rel="stylesheet" href="css/mystyles.css">
-    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/modal-fx.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">

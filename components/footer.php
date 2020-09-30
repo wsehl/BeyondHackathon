@@ -2,7 +2,6 @@
 ?>
 
 <script src="js/modal-fx.min.js"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
