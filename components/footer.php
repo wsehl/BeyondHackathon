@@ -36,11 +36,10 @@
 </script>
 
 <script>
-    var dlang;
-
-    function ChangeLang(dlang) {
-        $.post( "config.php", { lang: dlang});
-    }
+    var lang;
+    function ChangeLang(lang) {
+        $.post( "index.php", { lang: lang})
+    };
 </script>
 
 </body>
