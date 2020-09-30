@@ -4,7 +4,7 @@ $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty(trim($_POST["username"]))) {
-        $username_err = "Пожалуйста, введите имя полльзователя.";
+        $username_err = $lang['username_empty'];
     } else {
         $sql = "SELECT id FROM users WHERE username = ?";
         if ($stmt = mysqli_prepare($link, $sql)) {
@@ -13,29 +13,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (mysqli_stmt_execute($stmt)) {
                 mysqli_stmt_store_result($stmt);
                 if (mysqli_stmt_num_rows($stmt) == 1) {
-                    $username_err = "Аккаунт с таким логином уже есть";
+                    $username_err = $lang['username_similar'];
                 } else {
                     $username = trim($_POST["username"]);
                 }
             } else {
-                echo "Что-то пошло не так";
+                echo $lang['smth_wrong'];
             }
         }
         mysqli_stmt_close($stmt);
     }
     if (empty(trim($_POST["password"]))) {
-        $password_err = "Введите пароль";
+        $password_err = $lang['password_empty'];
     } elseif (strlen(trim($_POST["password"])) < 3) {
-        $password_err = "В пароле должно быть больше 3 символов";
+        $password_err = $lang['password_small'];
     } else {
         $password = trim($_POST["password"]);
     }
     if (empty(trim($_POST["confirm_password"]))) {
-        $confirm_password_err = "Подтвердите пароль";
+        $confirm_password_err = $lang['confirm_password'];
     } else {
         $confirm_password = trim($_POST["confirm_password"]);
         if (empty($password_err) && ($password != $confirm_password)) {
-            $confirm_password_err = "Пароли не совпадают";
+            $confirm_password_err = $lang['password_different'];
         }
     }
     if (empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (mysqli_stmt_execute($stmt)) {
                 header("location: index.php");
             } else {
-                echo "Что-то пошло не так";
+                echo $lang['smth_wrong'];
             }
         }
         mysqli_stmt_close($stmt);
