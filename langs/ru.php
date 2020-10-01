@@ -35,3 +35,4 @@ $lang['event']="Событие";
 $lang['type']="Тип";
 $lang['city']="Город";
 $lang['address']="Адрес";
+$lang['eventAdd']="Добавить своё событие";

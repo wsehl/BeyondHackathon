@@ -24,7 +24,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
             </div>
 
         </div>
-        <button class="button is-medium is-fullwidth"><?php echo $lang['eventAdd']; ?>Добавить своё событие</button>
+        <button class="button is-medium is-fullwidth"><?php echo $lang['eventAdd']; ?></button>
         <table class="table">
         <thead>
     <tr>

@@ -35,3 +35,4 @@ $lang['event']="Event";
 $lang['type']="Type";
 $lang['city']="City";
 $lang['address']="Address";
+$lang['eventAdd']="Add new event";
