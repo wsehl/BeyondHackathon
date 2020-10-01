@@ -35,3 +35,4 @@ $lang['event']="Оқиға";
 $lang['type']="Түр";
 $lang['city']="Қала";
 $lang['address']="Мекен-жай";
+$lang['eventAdd']="Жаңа оқиға қосыңыз";
