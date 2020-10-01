@@ -29,3 +29,4 @@ $lang['smth_wrong']="Бірдеңе дұрыс болмады";
 $lang['password_small']="Құпия сөз 3 таңбадан артық болуы керек";
 $lang['confirm_password']="Құпия сөзді растаңыз";
 $lang['password_different']="Құпия сөздер сәйкес келмейді";
+$lang['loginproblems']="Кіру кезінде қиындық туындады ма?";

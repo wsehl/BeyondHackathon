@@ -24,7 +24,7 @@ $fullhd-enabled: false;
 
 //Modal
 $modal-card-head-border-bottom: 0px;
-$modal-content-width: 500px;
+$modal-content-width: 520px;
 
 // Update some of Bulma's component variables
 $body-background-color: $beige-lighter;
@@ -42,7 +42,7 @@ $background_color_1: #4285f4;
 $background_color_2: #fff;
 
 .google-btn {
-  width: 184px;
+  width: 200px;
   height: 40px;
   background-color: $background_color_1;
   border-radius: 2px;
@@ -68,7 +68,7 @@ $background_color_2: #fff;
   }
   .btn-text {
     float: right;
-    margin: 10px 11px 0 0;
+    margin: 10px 17px 0 0;
     color: $color_1;
     font-size: 14px;
     letter-spacing: 0.2px;

@@ -3398,7 +3398,7 @@ button.dropdown-item {
     .modal-card {
       margin: 0 auto;
       max-height: calc(100vh - 40px);
-      width: 500px; } }
+      width: 520px; } }
 
 .modal-close {
   background: none;
@@ -7145,7 +7145,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem; }
 
 .google-btn {
-  width: 184px;
+  width: 200px;
   height: 40px;
   background-color: #4285f4;
   border-radius: 2px;
@@ -7168,7 +7168,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
     height: 18px; }
   .google-btn .btn-text {
     float: right;
-    margin: 10px 11px 0 0;
+    margin: 10px 17px 0 0;
     color: #fff;
     font-size: 14px;
     letter-spacing: 0.2px;

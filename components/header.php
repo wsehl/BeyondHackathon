@@ -28,8 +28,8 @@
             </div>
             <div id="navMenuDocumentation" class="navbar-menu">
                 <div class="navbar-start">
-                    <div class="navbar-item has-dropdown is-hoverable is-active">
-                        <a class="navbar-link is-arrowless" role="presentation"><i class="fas fa-globe-asia"></i></a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link is-arrowless" role="presentation">&nbsp;&nbsp;&nbsp;<i class="fas fa-globe-asia"></i>&nbsp;&nbsp;&nbsp;</a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('ru.php')"><img alt="flag russia" src="https://twemoji.maxcdn.com/2/svg/1f1f7-1f1fa.svg" class="g-image" style="height: 64px;padding:0rem"></a>
                             <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('en.php')"><img alt="flag united states" src="https://twemoji.maxcdn.com/2/svg/1f1fa-1f1f8.svg" class="g-image" style="height: 64px;"></a>
@@ -70,7 +70,6 @@
             </div>
         </div>
     </nav>
-
     <div id="#login" class="modal modal-fx-fadeInScale">
         <div class="modal-background"></div>
         <div class="modal-content modal-card">
@@ -106,15 +105,6 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="field">
-                            <div class="b-checkbox is-info is-inline">
-                                <input class="is-checkradio is-info" id="rememberme" name="rememberme" type="checkbox" checked="">
-                                <label for="rememberme">
-                                    <?php echo $lang['rememberme']; ?>
-                                </label>
-                            </div>
-                            <a href="login.php?forgot" class="is-pulled-right"><?php echo $lang['passwordReset']; ?></a>
-                        </div>
                         <br>
                         <div class="field is-grouped">
                             <div class="control">
@@ -134,13 +124,7 @@
                     </form>
                 </section>
                 <footer class="modal-card-foot">
-                    <a class="button is-light modal-button" data-target="#register">
-                        <span class="icon has-text-info">
-                            <i class="fas fa-sign-in-alt has-text-link"></i>
-                        </span>
-                        <span><?php echo $lang['register']; ?></span>
-                    </a>
-                    <a href="login.php?resend" class="button is-light"><?php echo $lang['verification']; ?></a>
+                    <a href="account-recovery.php" class=""><?php echo $lang['loginproblems']; ?></a>
                 </footer>
             </div>
             <div id="regid" class="content-tab" style="display:none">
@@ -201,8 +185,7 @@
                     </form>
                 </section>
                 <footer class="modal-card-foot">
-                    <a href="login.php?login" class="button is-light"><?php echo $lang['haveAccount']; ?></a>
-                    <a href="login.php?resend" class="button is-light"><?php echo $lang['verification']; ?></a>
+                    <a href="account-recovery.php" class=""><?php echo $lang['loginproblems']; ?></a>
                 </footer>
             </div>
         </div>

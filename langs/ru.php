@@ -29,3 +29,4 @@ $lang['smth_wrong']="Что-то пошло не так";
 $lang['password_small']="Пароль должен содержать больше 3 символов";
 $lang['confirm_password']="Подтвердите пароль";
 $lang['password_different']="Пароль не совпадает";
+$lang['loginproblems']="Проблемы со входом в систему?";
