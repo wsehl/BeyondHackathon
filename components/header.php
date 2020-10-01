@@ -30,6 +30,12 @@
                     </div>
                     <div id="navMenuDocumentation" class="navbar-menu">
                         <div class="navbar-start">
+                            <div class="select">
+                                <select id="selectItem">
+                                    <option id="nursultan">Нур-Султан</option>
+                                    <option id="astana">Астана</option>
+                                </select>
+                            </div>
                             <div class="navbar-item has-dropdown is-hoverable">
                                 <a class="navbar-link is-arrowless" role="presentation">&nbsp;&nbsp;&nbsp;<i class="fas fa-globe-asia"></i>&nbsp;&nbsp;&nbsp;</a>
                                 <div class="navbar-dropdown">
@@ -38,12 +44,6 @@
                                     <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('kz.php')"><img alt="flag kazakhstan" src="https://twemoji.maxcdn.com/2/svg/1f1f0-1f1ff.svg" class="g-image" style="height: 64px;"></a>
                                     <a class="navbar-item is-invisible" style="margin-bottom:-10px;"></a>
                                 </div>
-                            </div>
-                            <div class="select">
-                                <select>
-                                    <option>Select dropdown</option>
-                                    <option>With options</option>
-                                </select>
                             </div>
                         </div>
                         <div class="navbar-end">
@@ -78,6 +78,15 @@
                     </div>
                 </div>
             </nav>
+        </div>
+    </section>
+
+    <section class="section is-header" style="margin-top:30px;">
+        <div class="container">
+            <div class="containerss">
+                <div class="nursultan">Ваш город Нур-Султан</div>
+                <div class="astana">Ваш город Астана</div>
+            </div>
         </div>
     </section>
     <div id="#login" class="modal modal-fx-fadeInScale">

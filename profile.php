@@ -9,6 +9,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 require_once('config.php');
 require_once("langs/$default_lang");
 require_once('components/header.php');
+require_once('components/footer.php');
 ?>
 
 <div class="container">
