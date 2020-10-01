@@ -8,8 +8,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 
 if ($_POST) {
-    $_SESSION["lang"] = $_POST["lang"];
-    $default_lang = $_POST["lang"];
+    if (isset($_POST["lang"])) {
+        $_SESSION["lang"] = $_POST["lang"];
+        $default_lang = $_POST["lang"];
+    }
+    if (isset($_POST["city"])) {
+        $_SESSION["city"] = $_POST["city"];
+        $default_lang = $_POST["city"];
+    }
 }
 
 require_once('config.php');

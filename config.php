@@ -13,3 +13,8 @@ if (empty($_SESSION["lang"])) {
 } else {
     $default_lang = $_SESSION["lang"];
 }
+if (empty($_SESSION["city"])) {
+    $default_city = "Nur-sultan";
+} else {
+    $default_city = $_SESSION["city"];
+}

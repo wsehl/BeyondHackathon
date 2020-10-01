@@ -52,7 +52,7 @@
             $('#' + stored_select).prop("selected", true);
             $('.' + stored_select).show();
         } else {
-            $('.nursultan').show();
+            $('.Nur-sultan').show();
         }
     });
 
@@ -61,6 +61,9 @@
         var selected = $('#selectItem option:selected').attr('id');
         localStorage.setItem("myKey", selected);
         $('.' + selected).show();
+        $.post("index.php", {
+            city: selected
+        })
     });
 </script>
 

@@ -32,8 +32,8 @@
                         <div class="navbar-start">
                             <div class="select">
                                 <select id="selectItem">
-                                    <option id="nursultan">Нур-Султан</option>
-                                    <option id="astana">Астана</option>
+                                    <option id="Nur-sultan">Нур-Султан</option>
+                                    <option id="Astana">Астана</option>
                                 </select>
                             </div>
                             <div class="navbar-item has-dropdown is-hoverable">
@@ -84,8 +84,8 @@
     <section class="section is-header" style="margin-top:30px;">
         <div class="container">
             <div class="containerss">
-                <div class="nursultan">Ваш город Нур-Султан</div>
-                <div class="astana">Ваш город Астана</div>
+                <div class="Nur-sultan">Ваш город Нур-Султан</div>
+                <div class="Astana">Ваш город Астана</div>
             </div>
         </div>
     </section>
