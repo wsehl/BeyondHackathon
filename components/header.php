@@ -39,6 +39,12 @@
                                     <a class="navbar-item is-invisible" style="margin-bottom:-10px;"></a>
                                 </div>
                             </div>
+                            <div class="select">
+                                <select>
+                                    <option>Select dropdown</option>
+                                    <option>With options</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="navbar-end">
                             <div class="navbar-item">
@@ -90,7 +96,7 @@
             </header>
             <div id="loginid" class="content-tab">
                 <section class="modal-card-body">
-                    <form method="POST" action="login.php?login">
+                    <form method="POST" action="login.php">
                         <div class="field">
                             <label class="label"><?php echo $lang['username']; ?></label>
                             <div class="control has-icons-left has-icons-right">
@@ -133,7 +139,7 @@
             </div>
             <div id="regid" class="content-tab" style="display:none">
                 <section class="modal-card-body">
-                    <form method="POST" action="login.php?register">
+                    <form method="POST" action="register.php">
                         <div class="field">
                             <label class="label"><?php echo $lang['username']; ?></label>
                             <div class="control has-icons-left has-icons-right">
