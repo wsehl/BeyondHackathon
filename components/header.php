@@ -18,58 +18,62 @@
 </head>
 
 <body>
-    <nav id="navbar" class="bd-navbar navbar is-spaced is-fixed-top">
+    <section class="section is-header" style="height: 50px; margin-top: -40px;">
         <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="index.php"><img src="images/logo.png" alt="Restaurant X" width="112" height="28"></a>
-                <div id="navbarBurger" class="navbar-burger burger" data-target="navMenuDocumentation">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-            <div id="navMenuDocumentation" class="navbar-menu">
-                <div class="navbar-start">
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link is-arrowless" role="presentation">&nbsp;&nbsp;&nbsp;<i class="fas fa-globe-asia"></i>&nbsp;&nbsp;&nbsp;</a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('ru.php')"><img alt="flag russia" src="https://twemoji.maxcdn.com/2/svg/1f1f7-1f1fa.svg" class="g-image" style="height: 64px;padding:0rem"></a>
-                            <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('en.php')"><img alt="flag united states" src="https://twemoji.maxcdn.com/2/svg/1f1fa-1f1f8.svg" class="g-image" style="height: 64px;"></a>
-                            <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('kz.php')"><img alt="flag kazakhstan" src="https://twemoji.maxcdn.com/2/svg/1f1f0-1f1ff.svg" class="g-image" style="height: 64px;"></a>
-                            <a class="navbar-item is-invisible" style="margin-bottom:-10px;"></a>
+            <nav id="navbar" class="bd-navbar navbar is-spaced is-fixed-top">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="index.php"><img src="images/logo.png" alt="Restaurant X" width="112" height="28"></a>
+                        <div id="navbarBurger" class="navbar-burger burger" data-target="navMenuDocumentation">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div id="navMenuDocumentation" class="navbar-menu">
+                        <div class="navbar-start">
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-link is-arrowless" role="presentation">&nbsp;&nbsp;&nbsp;<i class="fas fa-globe-asia"></i>&nbsp;&nbsp;&nbsp;</a>
+                                <div class="navbar-dropdown">
+                                    <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('ru.php')"><img alt="flag russia" src="https://twemoji.maxcdn.com/2/svg/1f1f7-1f1fa.svg" class="g-image" style="height: 64px;padding:0rem"></a>
+                                    <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('en.php')"><img alt="flag united states" src="https://twemoji.maxcdn.com/2/svg/1f1fa-1f1f8.svg" class="g-image" style="height: 64px;"></a>
+                                    <a class="navbar-item" style="padding-right:0rem" href="" onclick="ChangeLang('kz.php')"><img alt="flag kazakhstan" src="https://twemoji.maxcdn.com/2/svg/1f1f0-1f1ff.svg" class="g-image" style="height: 64px;"></a>
+                                    <a class="navbar-item is-invisible" style="margin-bottom:-10px;"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <a class="navbar-item bd-navbar-item-love mx-2" href="">
+                                    <span><?php echo $lang['about']; ?></span>
+                                </a>
+                                <?php
+                                if ($logged == false) {
+                                ?>
+                                    <a class="button modal-button" data-target="#login">
+                                        <span class="icon has-text-info">
+                                            <i class="far fa-user has-text-link"></i>
+                                        </span>
+                                        <span><?php echo $lang['login']; ?></span>
+                                    </a>
+                                <?php
+                                } else if ($logged == true) {
+                                ?>
+                                    <div class="navbar-item has-dropdown is-hoverable">
+                                        <a class="navbar-link" role="presentation"><?php echo $lang['account']; ?></a>
+                                        <div class="navbar-dropdown"><a class="navbar-item" href=""><?php echo $lang['profile']; ?></a><a class="navbar-item" href=""><?php echo $lang['events']; ?></a>
+                                            <hr class="navbar-divider">
+                                            <a class="navbar-item" href="logout.php"><?php echo $lang['logout']; ?></a>
+                                        </div>
+                                    </div>
+                                <?php
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <a class="navbar-item bd-navbar-item-love mx-2" href="">
-                            <span><?php echo $lang['about']; ?></span>
-                        </a>
-                        <?php
-                        if ($logged == false) {
-                        ?>
-                            <a class="button modal-button" data-target="#login">
-                                <span class="icon has-text-info">
-                                    <i class="far fa-user has-text-link"></i>
-                                </span>
-                                <span><?php echo $lang['login']; ?></span>
-                            </a>
-                        <?php
-                        } else if ($logged == true) {
-                        ?>
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link" role="presentation"><?php echo $lang['account']; ?></a>
-                                <div class="navbar-dropdown"><a class="navbar-item" href=""><?php echo $lang['profile']; ?></a><a class="navbar-item" href=""><?php echo $lang['events']; ?></a>
-                                    <hr class="navbar-divider">
-                                    <a class="navbar-item" href="logout.php"><?php echo $lang['logout']; ?></a>
-                                </div>
-                            </div>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
+            </nav>
         </div>
-    </nav>
+    </section>
     <div id="#login" class="modal modal-fx-fadeInScale">
         <div class="modal-background"></div>
         <div class="modal-content modal-card">
