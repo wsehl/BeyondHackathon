@@ -30,6 +30,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
                     <th><?php echo $lang['type']; ?></th>
                     <th><?php echo $lang['city']; ?></th>
                     <th><?php echo $lang['address']; ?></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +44,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
                     echo '<td>' . $row['Type'] . '</td>';
                     echo '<td>' . $row['City'] . '</td>';
                     echo '<td>' . $row['Address'] . '</td>';
+                    echo '<td><a onclick="Participate'."('". $row['Event'] ."')".'"> +</a></td>';
                     echo '</tr>';
                 }
                 ?>

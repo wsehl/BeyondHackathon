@@ -43,6 +43,13 @@
             lang: lang
         })
     };
+    function Participate(event) {
+        var event;
+        $.post("index.php", {
+            event: event,
+            participant: '<?php echo $_SESSION["username"];?>'
+        })
+    };
 </script>
 
 <script type="text/javascript">

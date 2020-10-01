@@ -1,4 +1,5 @@
 <?php
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,15 +79,6 @@
                     </div>
                 </div>
             </nav>
-        </div>
-    </section>
-
-    <section class="section is-header" style="margin-top:30px;">
-        <div class="container">
-            <div class="containerss">
-                <div class="Nur-sultan">Ваш город Нур-Султан</div>
-                <div class="Astana">Ваш город Астана</div>
-            </div>
         </div>
     </section>
     <div id="#login" class="modal modal-fx-fadeInScale">
