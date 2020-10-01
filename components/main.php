@@ -16,7 +16,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
             </div>
 
             <div class="column has-text-centered is-hidden-desktop">
-                <p class="title">Create modern, practical one-page site for just about anything.</p>
+                <p class="title"><?php echo $lang['herotitle']; ?></p>
                 <p class="subtitle is-5"><i>"Think global, act local"</i></p>
                 <figure class="image">
                     <img alt="home-page-banner-3d-figure" src="images/banner.png">
@@ -24,6 +24,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
             </div>
 
         </div>
+<<<<<<< Updated upstream
         <button class="button is-medium is-fullwidth"><?php echo $lang['eventAdd']; ?></button>
         <table class="table">
         <thead>
@@ -50,7 +51,34 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
   echo $default_city;
   ?>
         </tbody>
+=======
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><?php echo $lang['event']; ?></th>
+                    <th><?php echo $lang['type']; ?></th>
+                    <th><?php echo $lang['city']; ?></th>
+                    <th><?php echo $lang['address']; ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT * FROM events";
+                $data = mysqli_query($link, $sql);
+
+                while ($row = mysqli_fetch_array($data)) {
+                    echo '<tr>';
+                    echo '<td>' . $row['Event'] . '</td>';
+                    echo '<td>' . $row['Type'] . '</td>';
+                    echo '<td>' . $row['City'] . '</td>';
+                    echo '<td>' . $row['Address'] . '</td>';
+                    echo '</tr>';
+                }
+                ?>
+            </tbody>
+>>>>>>> Stashed changes
         </table>
-        
+
     </div>
 </section>
