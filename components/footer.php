@@ -37,7 +37,6 @@
 </script>
 
 <script>
-    var lang;
     function ChangeLang(lang) {
         var lang;
         $.post("index.php", {
