@@ -26,6 +26,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
         </div>
         <button class="button is-medium is-fullwidth"><?php echo $lang['eventAdd']; ?></button>
         <table class="table">
+<<<<<<< HEAD
         <thead>
     <tr>
       <th><?php echo $lang['event']; ?></th>
@@ -50,6 +51,32 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
   echo $default_city;
   ?>
         </tbody>
+=======
+            <thead>
+                <tr>
+                    <th><?php echo $lang['event']; ?></th>
+                    <th><?php echo $lang['type']; ?></th>
+                    <th><?php echo $lang['city']; ?></th>
+                    <th><?php echo $lang['address']; ?></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT * FROM events WHERE City='$default_city'";
+                $data = mysqli_query($link, $sql);
+
+                while ($row = mysqli_fetch_array($data)) {
+                    echo '<tr>';
+                    echo '<td>' . $row['Event'] . '</td>';
+                    echo '<td>' . $row['Type'] . '</td>';
+                    echo '<td>' . $row['City'] . '</td>';
+                    echo '<td>' . $row['Address'] . '</td>';
+                    echo '</tr>';
+                }
+                echo $default_city;
+                ?>
+            </tbody>
+>>>>>>> 18e12a78e96393fbc865560b5d10a3e212515983
         </table>
 
     </div>
