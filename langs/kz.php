@@ -31,3 +31,7 @@ $lang['confirm_password'] = "Құпия сөзді растаңыз";
 $lang['password_different'] = "Құпия сөздер сәйкес келмейді";
 $lang['loginproblems'] = "Кіру кезінде қиындық туындады ма?";
 $lang['herotitle'] = "Планетаны бірге құтқару үшін «жасыл» кездесулерді біріктіріңіз";
+$lang['event']="Оқиға";
+$lang['type']="Түр";
+$lang['city']="Қала";
+$lang['address']="Мекен-жай";

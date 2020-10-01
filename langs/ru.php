@@ -31,3 +31,7 @@ $lang['confirm_password'] = "Подтвердите пароль";
 $lang['password_different'] = "Пароль не совпадает";
 $lang['loginproblems'] = "Проблемы со входом в систему?";
 $lang['herotitle'] = "Объединяйтесь на зеленых встречах, чтобы вместе спасти планету";
+$lang['event']="Событие";
+$lang['type']="Тип";
+$lang['city']="Город";
+$lang['address']="Адрес";

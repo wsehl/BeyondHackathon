@@ -24,5 +24,31 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
             </div>
 
         </div>
+        <table class="table">
+        <thead>
+    <tr>
+      <th><?php echo $lang['event']; ?></th>
+      <th><?php echo $lang['type']; ?></th>
+      <th><?php echo $lang['city']; ?></th>
+      <th><?php echo $lang['address']; ?></th>
+    </tr>
+  </thead>
+        <tbody>
+        <?php
+    $sql = "SELECT * FROM events";
+    $data = mysqli_query($link,$sql);
+
+        while($row = mysqli_fetch_array($data)){ 
+    echo '<tr>';
+    echo '<td>' . $row['Event'] . '</td>';
+    echo '<td>' . $row['Type'] . '</td>';
+    echo '<td>' . $row['City'] . '</td>';
+    echo '<td>' . $row['Address'] . '</td>';
+    echo '</tr>';
+  }
+  ?>
+        </tbody>
+        </table>
+        
     </div>
 </section>
