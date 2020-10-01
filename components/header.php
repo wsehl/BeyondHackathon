@@ -166,6 +166,15 @@
                                 </span>
                             </div>
                         </div>
+                        <div class="field">
+                            <label class="label"><?php echo $lang['confirm_password']; ?></label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input type="password" class="input" name="confirm_password" placeholder="Password">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-key"></i>
+                                </span>
+                            </div>
+                        </div>
                         <br>
                         <div class="field is-grouped">
                             <div class="control">
