@@ -1,6 +1,7 @@
 <?php
 session_start();
 if ($_SESSION["admin"] == true) {
+    
     function users()
     {
         require_once "config.php";
@@ -30,6 +31,23 @@ if ($_SESSION["admin"] == true) {
 } else {
     header("location: login.php");
     session_destroy();
+}
+if($_POST){
+require_once "config.php";
+$query ="SELECT `id` FROM `events` WHERE 1";
+$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+$rows = mysqli_num_rows($result);
+$event=$_POST['events'];
+$city=$_POST['city'];
+$address=$_POST['address'];
+$description=$_POST['description'];
+$type=$_POST['type'];
+$sql = "INSERT INTO `events` (`id`,`Event`, `Type`, `City`, `Address`, `Description`) VALUES ($rows,'$event','$type','$city','$address','$description')";
+if (mysqli_query($link, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($link);
+}
 }
 ?>
 <!DOCTYPE html>
@@ -119,8 +137,20 @@ if ($_SESSION["admin"] == true) {
             <div class="tabs-stage">
                 <div id="tab-1">
                     <p>
-                        <?php
-                        ?>
+                    <form method="POST" action="admin.php">
+                                <input type="text" class="input" name="events" placeholder="Events"></br>
+                                <select name="type">
+    <option value="meeting">Meeting</option>
+    <option value="event">Event</option>
+   </select></br>
+                                <select name="city">
+    <option value="Nur-sultan">Nur-sultan</option>
+    <option value="Astana">Astana</option>
+   </select></br>
+   <input type="text" class="input" name="address" placeholder="Address"></br>
+   <input type="text" class="input" name="description" placeholder="Description"></br>
+                                <input class="button is-link" type="submit" name="push" value="кинуться" >
+                    </form>   
                     </p>
                 </div>
                 <div id="tab-2">
@@ -146,5 +176,4 @@ if ($_SESSION["admin"] == true) {
         });
     </script>
 </body>
-
 </html>
