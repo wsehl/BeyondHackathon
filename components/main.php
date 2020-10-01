@@ -22,9 +22,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
                     <img alt="home-page-banner-3d-figure" src="images/banner.png">
                 </figure>
             </div>
-
         </div>
-        <button class="button is-medium is-fullwidth"><?php echo $lang['eventAdd']; ?></button>
         <table class="table">
             <thead>
                 <tr>
@@ -47,7 +45,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(223,233,243,1) 
                     echo '<td>' . $row['Address'] . '</td>';
                     echo '</tr>';
                 }
-                echo $default_city;
                 ?>
             </tbody>
         </table>
