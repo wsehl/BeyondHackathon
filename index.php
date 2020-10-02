@@ -20,9 +20,19 @@ if ($_POST) {
         $event=$_POST['event'];
         $sql= "SELECT `Participants` FROM `events` WHERE `Event`='$event'";      
 $old = mysqli_fetch_row(mysqli_query($link, $sql));
-$participant=$_POST['participant'].',  '.$old[0];
-        $sql= "UPDATE `events` SET `Participants`='$participant' WHERE `Event`='$event'";
-        mysqli_query($link, $sql);
+$participants=explode(" ",$old[0]);
+for($i=0;$i<count($participants);$i++){
+    if($_POST['participant']==$participants[$i]){
+    $already=true;
+    }
+}
+if($already==false){
+    $participant=$_POST['participant'].' '.$old[0];
+    $sql= "UPDATE `events` SET `Participants`='$participant' WHERE `Event`='$event'";
+    mysqli_query($link, $sql);
+}
+
+       
     }
 }
 
