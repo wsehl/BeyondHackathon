@@ -17,23 +17,21 @@ if ($_POST) {
         $default_lang = $_POST["city"];
     }
     if(isset($_POST['event'])){
-        $event=$_POST['event'];
-        $sql= "SELECT `Participants` FROM `events` WHERE `Event`='$event'";      
+        $participant=$_POST['participant'];
+        $sql= "SELECT `Event` FROM `users` WHERE `username`='$participant'";      
 $old = mysqli_fetch_row(mysqli_query($link, $sql));
-$participants=explode(" ",$old[0]);
-for($i=0;$i<count($participants);$i++){
-    if($_POST['participant']==$participants[$i]){
+$events=explode(" ",$old[0]);
+for($i=0;$i<count($events);$i++){
+    if($_POST['event']==$events[$i]){
     $already=true;
     }
 }
 if($already==false){
-    $participant=$_POST['participant'].' '.$old[0];
-    $sql= "UPDATE `events` SET `Participants`='$participant' WHERE `Event`='$event'";
+    $event=$_POST['event'].' '.$old[0];
+    $sql= "UPDATE `users` SET `Event`='$event' WHERE `username`='$participant'";
     mysqli_query($link, $sql);
 }
-
-       
-    }
+}
 }
 
 

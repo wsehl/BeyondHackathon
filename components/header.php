@@ -66,7 +66,7 @@
                                 ?>
                                     <div class="navbar-item has-dropdown is-hoverable">
                                         <a class="navbar-link" role="presentation"><?php echo $lang['account']; ?></a>
-                                        <div class="navbar-dropdown"><a class="navbar-item" href="profile.php"><?php echo $lang['profile']; ?></a><a class="navbar-item" href=""><?php echo $lang['events']; ?></a>
+                                        <div class="navbar-dropdown"><a class="navbar-item" href="profile.php"><?php echo $lang['profile']; ?></a><a class="navbar-item" href="event.php"><?php echo $lang['events']; ?></a>
                                             <hr class="navbar-divider">
                                             <a class="navbar-item" href="logout.php"><?php echo $lang['logout']; ?></a>
                                         </div>
